@@ -20,18 +20,27 @@
                         <div class="col mb-3">
                             <label class="form-label">Product Name</label>
                             <input type="text" name="title" class="form-control" placeholder="Title" value="{{ $products->title }}">
+                            @error('title')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                     <div class="row">
                         <div class="col mb-3">
                             <label class="form-label">Category</label>
                             <input type="text" name="category" class="form-control" placeholder="Category" value="{{ $products->category }}">
+                            @error('category')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                     <div class="row">
                         <div class="col mb-3">
                             <label class="form-label">Price</label>
                             <input type="text" name="price" class="form-control" placeholder="Price" value="{{ $products->price }}">
+                            @error('price')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                     <div class="row mt-3">
